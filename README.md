@@ -2,6 +2,8 @@
 
 A creative project for generating satirical tech and office culture parody cards in the style of Garbage Pail Kids. This project uses AI to create personalized, workplace-safe parody cards that playfully mock tech and office culture tropes.
 
+Created by [Cory Bagozzi](https://www.linkedin.com/in/corybagozzi/)
+
 ## Overview
 
 LinkedIn Lunatics generates parody trading cards that transform professional headshots into satirical, Garbage Pail Kids-style stickers. Each card features:
