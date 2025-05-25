@@ -1,8 +1,22 @@
 # LinkedIn Lunatics
 
-A creative project for generating satirical tech and office culture parody cards in the style of Garbage Pail Kids. This project uses AI to create personalized, workplace-safe parody cards that playfully mock tech and office culture tropes.
+Inspired by the r/LinkedInLunatics subreddit, this project brings the spirit of tech and office culture satire to life through Garbage Pail Kids-style parody cards. Using AI, it creates personalized, workplace-safe parody cards that playfully mock tech and office culture tropes.
 
 Created by [Cory Bagozzi](https://www.linkedin.com/in/corybagozzi/)
+
+Feel free to remix, share, or build upon this project - just toss a credit or link my way if you do! 🎨✨
+
+## Quick Start
+
+1. Copy the entire contents of `prompt.txt`
+2. Paste it into ChatGPT
+3. ChatGPT will ask you for:
+   - Your first name
+   - Your job title/role (for internal use only)
+   - A photo of your face or selfie
+4. Sit back and let ChatGPT generate your personalized parody card!
+
+**Bonus Tip:** Not quite what you were looking for? Feel free to ask ChatGPT to adjust the style, props, or theme! For example, try "Can you make it more startup-focused?" or "Could you add more tech props?" The AI is happy to iterate until you get your perfect parody card. 🎯
 
 ## Overview
 
@@ -23,14 +37,12 @@ The project uses a structured prompt (stored in `prompt.txt`) that defines:
 
 ## How to Use
 
-1. Provide the required inputs:
-   - First name
-   - Job title/role (for internal use only)
-   - Clear facial photo
-2. The system will generate:
-   - Three themed parody name options
-   - Five possible visual props
-   - A final card design incorporating the best elements
+Simply copy the prompt from `prompt.txt` and paste it into ChatGPT. The AI will guide you through the process, asking for your name, role, and photo. It will then:
+- Generate three themed parody name options
+- Create five possible visual props
+- Design a final card incorporating the best elements
+
+The prompt is designed to work seamlessly with ChatGPT's image generation capabilities, producing consistent, high-quality results while maintaining professional appropriateness.
 
 ## Project Structure
 
