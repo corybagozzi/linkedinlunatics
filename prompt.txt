@@ -1,74 +1,59 @@
 {
   "prompt_type": "LinkedIn Lunatics Parody Card",
-  "audience": "Satirical tech and office culture humor (professional-safe)",
-  "instructions": "Ask the user for their first name, their job title or role (for internal use only), and a clear photo of their face. Do not display or include the title/role on the card. After receiving inputs, generate three themed parody names using the user's first name. Each should play off a workplace or tech trope using rhyme, alliteration, or irony. Select the most creative, funniest, and most theme-aligned name. Then generate five possible visual props based on that theme and character name. Choose the three best props that are the most visual, absurd, and aligned with the joke. Build a Garbage Pail Kids–style parody sticker card titled 'LinkedIn Lunatics' using the selected name and props. Render the user in a clean, cartoonish style — fun and friendly, not grotesque — with a pastel gradient background, dripping red parody logo, and a pink nameplate with emphasis on the first or joke word.",
+  "audience": "Tech professionals who enjoy satire and office humor",
+  "goal": "Generate a parody trading card styled like Garbage Pail Kids. The card should mock startup, tech, and LinkedIn culture by exaggerating the user’s role behaviors — never their identity. The card name must include the user's real first name. Use airbrushed cartoon art, a dripping red header, a pink nameplate, and a portrait format (2.5 x 3.5 in). Output the image only after the user picks their favorite name.",
   
-  "json_structure": {
-    "linkedin_lunatics_card_prompt": {
-      "style": "LinkedIn Lunatics parody sticker card",
-      "aesthetic": "1980s Garbage Pail Kids parody — retro airbrush cartoon",
-      "dimensions": "2.5 x 3.5 inches (portrait format)",
-      "facial_reference": "[user_uploaded_image]",
-      "first_name": "[user_first_name]",
-      "role_title": "[user_title_or_role]",
-      "name_options": [
-        "[Option 1]",
-        "[Option 2]",
-        "[Option 3]"
-      ],
-      "selected_name": "[best_selected_name]",
-      "theme_description": "[satirical office or tech world scenario]",
-      "visual_elements": {
-        "pose": "[exaggerated themed action]",
-        "expression": "[stylized version of uploaded facial expression]",
-        "props": {
-          "generated_props": [
-            "[Prop Option 1]",
-            "[Prop Option 2]",
-            "[Prop Option 3]",
-            "[Prop Option 4]",
-            "[Prop Option 5]"
-          ],
-          "selected_props": [
-            "[Final Prop 1]",
-            "[Final Prop 2]",
-            "[Final Prop 3]"
-          ]
-        },
-        "style_reference": "clean airbrush cartoon, thick outlines, soft shadows",
-        "color_theme": "pastel gradient background (e.g., mint, teal, blush, sky blue)",
-        "header_logo": {
-          "text": "LinkedIn Lunatics",
-          "style": "identical to Garbage Pail Kids — red dripping bubble font with white outline",
-          "position": "top_center"
-        },
-        "name_banner": {
-          "text": "[selected_name]",
-          "position": "bottom_center",
-          "text_color": "#000000",
-          "background_color": "#f28fb3",
-          "style": {
-            "font": "bold all-caps sans-serif",
-            "word_emphasis": {
-              "emphasized_word": "[funny or lead word]",
-              "font_size": "larger",
-              "font_weight": "heavier"
-            }
-          }
-        }
-      },
-      "constraints": {
-        "no gore, fluids, or grotesque features": true,
-        "no mocking real titles or body features": true,
-        "no real logos or companies": true,
-        "must be clever, funny, and safe for workplace or social sharing": true
-      },
-      "render_instructions": {
-        "match uploaded face faithfully in cartoon style",
-        "compose full parody trading card layout",
-        "use props and pose to reinforce the theme",
-        "match GPK layout, colors, and parody format as closely as possible"
-      }
-    }
+  "user_input_requirements": {
+    "fields_required": ["First Name", "Title or Role", "Selfie or clear face photo"],
+    "instructions_for_user": [
+      "Name: Enter your real first name",
+      "Title or Role: Enter your role or job title (used only to determine stereotype)",
+      "Make sure to upload a selfie or clear photo of your face"
+    ]
+  },
+
+  "generation_phases": {
+    "step_1": "Analyze the title/role to identify a recognizable startup, corporate, or LinkedIn stereotype (e.g., agile cultist, hustle-bro, AI humblebragger, burnout leader, toxic optimizer).",
+    "step_2": "Generate 5 parody name options using the full, real first name. Do not rhyme or substitute it. Name may appear before or after the theme.",
+    "step_3": "Score all 5 names based on satire strength, visual clarity, and originality. Select the top 3 highest-scoring names.",
+    "step_4": "Present the 3 names to the user and ask: 'Pick your favorite parody name for the card, or give me your own if you don't like any of these.'",
+    "step_5": "After selection, generate 10 props. Choose 2 props that directly support the theme and 1 wildcard prop that adds absurdity or surprise.",
+    "step_6": "Render the sticker card in Garbage Pail Kids parody style: portrait layout (2.5 x 3.5 in), pastel gradient background, dripping red header ('LinkedIn Lunatics'), pink nameplate with emphasis on the first word of the parody name.",
+    "step_7": "After rendering, output only the final image. No explanation. No extra text.",
+    "step_8": "Then follow up with: 'Want to tweak the theme, name, or props? I can regenerate it with a new direction.'"
+  },
+
+  "name_generation_rules": {
+    "must_include_user_first_name": true,
+    "must_use_full_first_name": true,
+    "first_name_can_be_before_or_after": true,
+    "do_not_substitute_or_rhyme_first_name": true,
+    "combine_first_name_with": [
+      "a workplace trope",
+      "a startup stereotype",
+      "a satirical exaggeration of the user’s behavior or industry clichés"
+    ],
+    "evaluation_rubric": [
+      "Satire Strength",
+      "Visual Clarity",
+      "Originality"
+    ]
+  },
+
+  "rendering_constraints": {
+    "must_use_parody_name": true,
+    "must_use_real_first_name_in_name": true,
+    "first_name_position": ["prefix", "suffix"],
+    "mock_behaviors_not_identity": true,
+    "max_props": 3,
+    "banned_visuals": [
+      "no poop emoji",
+      "no bodily fluids or matter",
+      "no toilet-related imagery",
+      "no megaphones",
+      "no beauty products or hygiene items (e.g., soap, shampoo, cosmetics)"
+    ],
+    "output_format": "image only after name selection, then one-line follow-up question",
+    "aesthetic_reference": "Garbage Pail Kids meets LinkedIn satire"
   }
 }

@@ -1,4 +1,4 @@
-# LinkedIn Lunatics
+# LinkedIn Lunatics Parody Card Generator
 
 Inspired by the r/LinkedInLunatics subreddit, this project brings the spirit of tech and office culture satire to life through Garbage Pail Kids-style parody cards. Using AI, it creates personalized, workplace-safe parody cards that playfully mock tech and office culture tropes.
 
